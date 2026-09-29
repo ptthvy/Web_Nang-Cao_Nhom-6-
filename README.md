@@ -2,19 +2,25 @@
 
 # ✨ AI WEB APPS — NHÓM 6 ✨
 
-### 🌸 Classification · 🎯 Object Detection · 🔎 Image Retrieval · 💬 RAG Chatbot
+### 🌸 Một website • Bốn chức năng AI • Một hệ thống thống nhất
 
-**Đồ án môn Lập trình Web nâng cao — Phenikaa University**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6C63FF,50:45B7FF,100:20D3C2&height=180&section=header&text=AI%20WEB%20APPS&fontSize=46&fontColor=ffffff&fontAlignY=35&desc=Classification%20%E2%80%A2%20Detection%20%E2%80%A2%20Retrieval%20%E2%80%A2%20RAG%20Chatbot&descAlignY=58&animation=fadeIn" width="100%"/>
 
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=111827)
-![PyTorch](https://img.shields.io/badge/PyTorch-AI-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-Team%20Project-181717?style=for-the-badge&logo=github&logoColor=white)
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&logoColor=111827"/>
+  <img src="https://img.shields.io/badge/PyTorch-AI-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+</p>
 
-> 🚀 **Một website — Bốn chức năng AI — Một backend FastAPI thống nhất**
+<p>
+  <img src="https://img.shields.io/badge/Status-Completed-22C55E?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Team-Nh%C3%B3m%206-8B5CF6?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Project-AI%20Web%20Apps-0EA5E9?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-FF5A7A?style=flat-square"/>
+</p>
 
-[📸 Giao diện](#-giao-diện-hệ-thống) • [🧠 Chức năng](#-4-chức-năng-ai) • [🏗️ Kiến trúc](#️-kiến-trúc-hệ-thống) • [⚡ Cách chạy](#-cách-chạy) • [👥 Thành viên](#-thành-viên)
+**[🌟 Giới thiệu](#-giới-thiệu) · [🧠 Chức năng](#-4-chức-năng-ai) · [🖼️ Giao diện](#️-giao-diện-hệ-thống) · [🏗️ Kiến trúc](#️-kiến-trúc-hệ-thống) · [⚡ Cách chạy](#-cách-chạy) · [👥 Thành viên](#-phân-công-thành-viên)**
 
 </div>
 
@@ -22,155 +28,228 @@
 
 ## 🌟 Giới thiệu
 
-**AI Web Apps** là bài tập nhóm xây dựng một hệ thống web tích hợp **4 chức năng trí tuệ nhân tạo** trên cùng một nền tảng. Hệ thống sử dụng **ReactJS** cho giao diện, **FastAPI** cho backend và các mô hình AI cho từng tác vụ.
-
-> 📚 Mã nguồn được phát triển dựa trên notebook `AI_Web_Apps_Streamlit_React.ipynb` do giảng viên cung cấp. Nhóm thực hiện chạy notebook, huấn luyện/nạp mô hình, kiểm thử từng chức năng và đóng gói thành project hoàn chỉnh.
-
-<table>
-<tr>
-<td width="25%" align="center"><b>🌻 Classification</b><br/>Phân loại 5 loài hoa</td>
-<td width="25%" align="center"><b>🎯 Detection</b><br/>Nhận diện đối tượng</td>
-<td width="25%" align="center"><b>🔍 Retrieval</b><br/>Tìm ảnh tương đồng</td>
-<td width="25%" align="center"><b>🤖 RAG Chatbot</b><br/>Hỏi đáp theo tài liệu</td>
-</tr>
-</table>
-
----
-
-## 📸 Giao diện hệ thống
-
-<table>
-<tr>
-<td width="50%" align="center">
-<h3>🌻 Image Classification</h3>
-<img src="docs/classify.png" width="100%" alt="Giao diện phân loại ảnh"/>
-<br/><sub>ResNet-18 phân loại ảnh hoa và hiển thị độ tin cậy.</sub>
-</td>
-<td width="50%" align="center">
-<h3>🎯 Object Detection</h3>
-<img src="docs/detect.png" width="100%" alt="Giao diện phát hiện đối tượng"/>
-<br/><sub>YOLO11n phát hiện, đóng khung và gắn nhãn đối tượng.</sub>
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-<h3>🔎 Image Retrieval</h3>
-<img src="docs/search.png" width="100%" alt="Giao diện tìm kiếm ảnh"/>
-<br/><sub>CLIP + FAISS tìm ảnh tương đồng theo truy vấn.</sub>
-</td>
-<td width="50%" align="center">
-<h3>💬 RAG Chatbot</h3>
-<img src="docs/chat.png" width="100%" alt="Giao diện chatbot RAG"/>
-<br/><sub>Chatbot ShopLite trả lời dựa trên kho tài liệu nội bộ.</sub>
-</td>
-</tr>
-</table>
-
----
-
-## 🧠 4 chức năng AI
-
-| | Chức năng | Công nghệ | Mô tả |
-|:--:|---|---|---|
-| 🌸 | **Phân loại hoa** | ResNet-18 | Nhận ảnh đầu vào và dự đoán 1 trong 5 loài hoa |
-| 🎯 | **Phát hiện đối tượng** | YOLO11n | Xác định vị trí, nhãn và độ tin cậy của đối tượng |
-| 🔎 | **Tìm kiếm ảnh** | CLIP + FAISS | Tìm ảnh tương đồng bằng ảnh hoặc mô tả tiếng Anh |
-| 💬 | **Chatbot RAG** | MiniLM + FAISS + Qwen | Truy xuất tài liệu liên quan rồi sinh câu trả lời |
-
----
-
-## 🏗️ Kiến trúc hệ thống
+> [!NOTE]
+> **AI Web Apps** là hệ thống web tích hợp **4 chức năng trí tuệ nhân tạo** trên cùng một nền tảng.  
+> Frontend được xây dựng bằng **ReactJS**, backend sử dụng **FastAPI**, các module AI được tổ chức riêng để dễ phát triển, kiểm thử và tích hợp.
 
 <div align="center">
 
-```mermaid
-graph LR
-    U[👤 Người dùng] --> R[⚛️ React / Streamlit]
-    R --> F[⚡ FastAPI]
-    F --> C[🌸 Classifier]
-    F --> D[🎯 Detector]
-    F --> S[🔎 Retrieval]
-    F --> A[💬 RAG Chatbot]
-    C --> O[✨ Kết quả]
-    D --> O
-    S --> O
-    A --> O
-    O --> R
-```
-
-**Người dùng → Giao diện → FastAPI → AI Modules → Kết quả**
+| 🌻 Classification | 🎯 Object Detection | 🔎 Image Retrieval | 💬 RAG Chatbot |
+|:---:|:---:|:---:|:---:|
+| Phân loại hình ảnh | Nhận diện đối tượng | Tìm ảnh tương đồng | Hỏi đáp theo dữ liệu |
+| `classifier.py` | `detector.py` | `retrieval.py` | `llm.py` |
 
 </div>
 
-### 📂 Cấu trúc chính
+---
+
+# 🧠 4 CHỨC NĂNG AI
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🌻 01 — Image Classification
+**Phân loại hình ảnh**
+
+- Nhận ảnh từ người dùng
+- Tiền xử lý dữ liệu đầu vào
+- Thực hiện dự đoán bằng model
+- Trả nhãn và độ tin cậy
+- Hiển thị kết quả trên ReactJS
+
+`core/classifier.py`  
+`web/src/features/Classify.jsx`  
+`api/main.py → classify`
+
+</td>
+<td width="50%" valign="top">
+
+### 🎯 02 — Object Detection
+**Nhận diện đối tượng**
+
+- Nhận diện nhiều đối tượng trong ảnh
+- Xác định vị trí đối tượng
+- Trả kết quả detection về API
+- Hiển thị kết quả trực quan trên web
+
+`core/detector.py`  
+`web/src/features/Detect.jsx`  
+`api/main.py → detect`
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### 🔎 03 — Image Retrieval
+**Tìm kiếm ảnh tương đồng**
+
+- Trích xuất đặc trưng ảnh
+- So sánh mức độ tương đồng
+- Tìm các ảnh gần nhất
+- Hỗ trợ chọn ảnh từ giao diện
+
+`core/retrieval.py`  
+`web/src/features/Search.jsx`  
+`web/src/components/ImagePicker.jsx`  
+`api/main.py → search`
+
+</td>
+<td width="50%" valign="top">
+
+### 💬 04 — RAG Chatbot
+**Chatbot hỏi đáp theo Knowledge Base**
+
+- Đọc dữ liệu Knowledge Base
+- Truy xuất ngữ cảnh liên quan
+- Kết hợp LLM để sinh câu trả lời
+- Giao tiếp trực tiếp trên giao diện chat
+
+`core/llm.py`  
+`web/src/features/Chat.jsx`  
+`data/kb/*`  
+`api/main.py → chat`
+
+</td>
+</tr>
+</table>
+
+---
+
+# 🖼️ GIAO DIỆN HỆ THỐNG
+
+<div align="center">
+
+### 🌸 Classification
+<img src="docs/classify.png" width="88%" alt="Classification Interface"/>
+
+<br/>
+
+### 🎯 Object Detection
+<img src="docs/detect.png" width="88%" alt="Object Detection Interface"/>
+
+<br/>
+
+### 🔎 Image Retrieval
+<img src="docs/search.png" width="88%" alt="Image Retrieval Interface"/>
+
+<br/>
+
+### 💬 RAG Chatbot
+<img src="docs/chat.png" width="88%" alt="RAG Chatbot Interface"/>
+
+</div>
+
+---
+
+# 🏗️ KIẾN TRÚC HỆ THỐNG
+
+```mermaid
+flowchart LR
+    U["👤 Người dùng"] --> F["⚛️ ReactJS Frontend"]
+    F --> A["⚡ FastAPI Backend"]
+
+    A --> C["🌻 Classification"]
+    A --> D["🎯 Detection"]
+    A --> R["🔎 Retrieval"]
+    A --> G["💬 RAG Chatbot"]
+
+    C --> O["✨ Kết quả"]
+    D --> O
+    R --> O
+    G --> O
+
+    O --> F
+```
+
+### 🔄 Luồng xử lý
+
+<div align="center">
+
+**👤 Người dùng**　→　**⚛️ ReactJS**　→　**⚡ FastAPI**　→　**🧠 AI Modules**　→　**✨ Kết quả**
+
+</div>
+
+---
+
+# 🛠️ TECH STACK
+
+<div align="center">
+
+| Layer | Công nghệ | Vai trò |
+|:---:|---|---|
+| 🎨 **Frontend** | ReactJS · JavaScript | Giao diện và tương tác người dùng |
+| ⚡ **Backend** | FastAPI · Python | API và điều phối xử lý |
+| 🧠 **AI Core** | PyTorch / AI Models | Classification · Detection · Retrieval |
+| 💬 **RAG** | LLM · Knowledge Base | Truy xuất dữ liệu và sinh câu trả lời |
+| 🗂️ **Version Control** | Git · GitHub | Quản lý mã nguồn và làm việc nhóm |
+
+</div>
+
+---
+
+# 📁 CẤU TRÚC PROJECT
 
 ```text
-Web_Nang-Cao_Nhom-6-
+Web_Nang-Cao_Nhom-6-/
 │
-├── 🧠 core/               # 4 module AI / inference
-├── ⚡ api/                # FastAPI backend
-├── ⚛️ web/                # React + Vite frontend
-├── 💬 data/kb/            # Knowledge Base cho RAG
-├── 📊 artifacts/          # Model + metrics
-├── 🖼️ docs/               # Ảnh giao diện / tài liệu
-├── 🎛️ config.py           # Cấu hình hệ thống
-└── 🚀 streamlit_app.py    # Giao diện Streamlit
+├── 📂 api/
+│   └── main.py
+│
+├── 📂 core/
+│   ├── classifier.py
+│   ├── detector.py
+│   ├── retrieval.py
+│   └── llm.py
+│
+├── 📂 data/
+│   └── kb/
+│
+├── 📂 web/
+│   └── src/
+│       ├── features/
+│       │   ├── Classify.jsx
+│       │   ├── Detect.jsx
+│       │   ├── Search.jsx
+│       │   └── Chat.jsx
+│       └── components/
+│           └── ImagePicker.jsx
+│
+├── 📂 docs/
+│   ├── classify.png
+│   ├── detect.png
+│   ├── search.png
+│   └── chat.png
+│
+└── 📄 README.md
 ```
 
-- **`core/`** — xử lý suy luận của mô hình, độc lập với giao diện web.
-- **`api/`** — cung cấp API HTTP bằng FastAPI và phục vụ bản build React.
-- **`web/`** — giao diện React + Vite.
-- **`streamlit_app.py`** — giao diện Streamlit sử dụng chung API.
-- **`config.py`** — cấu hình mô hình bằng biến môi trường.
-- **`artifacts/`** — lưu mô hình và các file đánh giá.
-
 ---
 
-## 📊 Mô hình & kết quả
+# ⚡ CÁCH CHẠY
 
-| 🎯 Chức năng | 🧠 Mô hình | 📦 Dữ liệu | 📈 Kết quả |
-|---|---|---|---|
-| 🌻 Phân loại hoa | **ResNet-18** | TF Flowers — 3.670 ảnh / 5 lớp | **Accuracy 95,1% · F1 95,1%** |
-| 🎯 Phát hiện đối tượng | **YOLO11n** | COCO128 | **mAP50 0,67 · mAP50-95 0,50** |
-| 🔎 Tìm kiếm ảnh | **CLIP ViT-B/32 + FAISS** | COCO128 + ảnh hoa — 628 ảnh | **Precision@5 = 0,88** |
-| 💬 Chatbot RAG | **MiniLM + FAISS + Qwen2.5** | 6 tài liệu ShopLite | **Hit@1 = Hit@3 = 1,0*** |
-
-<sub>*Các số đo được lấy từ `artifacts/*/metrics.json` và `artifacts/rag_metrics.json`. Xem mục Hạn chế để hiểu phạm vi đánh giá.</sub>
-
----
-
-## ⚡ Cách chạy
-
-### ☁️ Cách 1 — Google Colab
-
-> ⭐ **Khuyến nghị:** mở notebook trên Google Colab → bật **GPU T4** → chọn **Run all**. Ở cuối notebook sẽ xuất hiện link giao diện React và Streamlit.
-
-### 💻 Cách 2 — Chạy trên máy
-
-**Yêu cầu:** `Python 3.11` · `Node.js 22`
+### 1️⃣ Clone project
 
 ```bash
-# 1. Clone project
 git clone https://github.com/ptthvy/Web_Nang-Cao_Nhom-6-.git
 cd Web_Nang-Cao_Nhom-6-
-
-# 2. Cài thư viện Python
-pip install -r requirements.txt
-
-# 3. Chạy Backend + React build
-uvicorn api.main:app --port 8000
 ```
 
-Sau đó mở: `http://localhost:8000`
-
-**Chạy Streamlit:**
+### 2️⃣ Cài đặt Backend
 
 ```bash
-pip install -r requirements-streamlit.txt
-API_URL=http://localhost:8000 streamlit run streamlit_app.py
+pip install -r requirements.txt
 ```
 
-**Chạy React ở development mode:**
+### 3️⃣ Khởi chạy FastAPI
+
+```bash
+uvicorn api.main:app --reload
+```
+
+### 4️⃣ Khởi chạy Frontend
 
 ```bash
 cd web
@@ -178,66 +257,81 @@ npm install
 npm run dev
 ```
 
----
-
-## ⚙️ Biến môi trường
-
-| Biến | Mặc định | Ý nghĩa |
-|---|---|---|
-| `ENABLED_MODELS` | `classifier,detector,retrieval,llm` | Các mô hình được nạp |
-| `LLM_MODEL` | Qwen2.5 Instruct | Mô hình sinh câu trả lời |
-| `EMBED_MODEL` | MiniLM L12 v2 | Embedding cho RAG |
-| `CLIP_MODEL` | CLIP ViT-B/32 | Mô hình tìm kiếm ảnh |
-| `CORS_ORIGINS` | localhost | Các địa chỉ được phép gọi API |
+> [!TIP]
+> Khởi chạy **Backend trước**, sau đó chạy **Frontend** để giao diện có thể gọi các API AI.
 
 ---
 
-## 👥 Thành viên
+# 👥 PHÂN CÔNG THÀNH VIÊN
 
 <div align="center">
 
-| 👤 Thành viên | 🆔 MSSV | 💻 Phụ trách |
-|---|:---:|---|
-| **Phạm Thảo Hiền Vy** | `24100439` | Chatbot RAG · Kiểm thử · Giao diện chatbot |
-| **Đào Bá Tuấn Ngọc** | `24100498` | Slide trình bày · Tài liệu `docs/` |
-| **Phạm Thế Duy** | `24100583` | README · Rà soát tài liệu · Khai báo AI |
-| **Nguyễn Văn An** | `24100254` | Colab · GitHub · Kiểm thử · Tích hợp & nộp bài |
+| 👤 Thành viên | 🆔 MSSV | ⭐ Module chính | 🛠️ Phạm vi phụ trách |
+|---|:---:|---|---|
+| **Phạm Thảo Hiền Vy** | `24100439` | 🌻 **Image Classification** | `classifier.py` · `Classify.jsx` · classify API · **README & trình bày GitHub** |
+| **Đào Bá Tuấn Ngọc** | `24100498` | 🎯 **Object Detection** | `detector.py` · `Detect.jsx` · detect API · kiểm thử detection |
+| **Phạm Thế Duy** | `24100583` | 🔎 **Image Retrieval** | `retrieval.py` · `Search.jsx` · `ImagePicker.jsx` · search API |
+| **Nguyễn Văn An** | `24100254` | 💬 **RAG Chatbot** | `llm.py` · `Chat.jsx` · `data/kb/*` · chat API · tích hợp hệ thống |
 
 </div>
 
+### 🌻 Phạm Thảo Hiền Vy — Image Classification + README
+
+```text
+Người dùng
+    ↓
+Classify.jsx
+    ↓
+FastAPI / classify
+    ↓
+core/classifier.py
+    ↓
+AI Model
+    ↓
+Kết quả phân loại
+```
+
+> Ngoài module **Image Classification**, Vy phụ trách thiết kế và hoàn thiện **README**, trình bày giao diện và tài liệu GitHub của nhóm.
+
 ---
 
-## ⚠️ Hạn chế
+# 🚀 QUY TRÌNH THỰC HIỆN
+
+```mermaid
+flowchart LR
+    A["1️⃣ Xây dựng AI"] --> B["2️⃣ Tạo API"]
+    B --> C["3️⃣ Xây dựng React UI"]
+    C --> D["4️⃣ Tích hợp"]
+    D --> E["5️⃣ Kiểm thử"]
+    E --> F["6️⃣ GitHub & README"]
+```
+
+1. **Xây dựng AI Core** cho từng chức năng.
+2. **Tạo FastAPI endpoint** kết nối frontend với module AI.
+3. **Thiết kế giao diện ReactJS** cho từng chức năng.
+4. **Tích hợp Frontend ↔ Backend ↔ AI**.
+5. **Kiểm thử** và xử lý lỗi.
+6. **Hoàn thiện GitHub, README và tài liệu trình bày**.
+
+---
+
+## ⚠️ Lưu ý
 
 > [!IMPORTANT]
-> Đây là project phục vụ mục đích học tập. Các chỉ số đánh giá cần được hiểu trong phạm vi bộ dữ liệu và thiết lập thử nghiệm của bài.
-
-- 🌸 **Classification:** chỉ nhận biết 5 loài hoa; ảnh ngoài 5 lớp vẫn bị gán vào một lớp gần nhất.
-- 🎯 **Detection:** đánh giá trên COCO128 nên chưa phản ánh đầy đủ chất lượng trên dữ liệu hoàn toàn mới.
-- 🔎 **Retrieval:** CLIP gốc hoạt động tốt nhất với truy vấn tiếng Anh; kho ảnh hiện có 628 ảnh.
-- 💬 **RAG:** mô hình ngôn ngữ nhỏ vẫn có khả năng trả lời chưa chính xác; tập đánh giá chatbot còn nhỏ.
-- ☁️ **Deployment:** link demo phụ thuộc vào phiên Google Colab và chưa được triển khai trên server cố định.
-
----
-
-## 🤖 Khai báo sử dụng AI
-
-| Công cụ | Phiên bản | Mục đích |
-|---|---|---|
-| **Codex — OpenAI** | GPT-5.6 Terra | Hỗ trợ chạy notebook, hoàn thiện web, GitHub, README và slide |
-
-**Các mô hình AI trong sản phẩm:** `ResNet-18` · `YOLO11n` · `CLIP ViT-B/32` · `MiniLM-L12-v2` · `Qwen2.5-Instruct`
+> Project được thực hiện phục vụ mục đích **học tập**. Kết quả của các mô hình AI phụ thuộc vào dữ liệu, model và thiết lập thử nghiệm được sử dụng trong bài.
 
 ---
 
 <div align="center">
 
-### 💙 AI WEB APPS · NHÓM 6
+## 💙 THANK YOU FOR VISITING OUR PROJECT 💙
 
-**Lập trình Web nâng cao · Phenikaa University**
+### ✨ AI Web Apps — Nhóm 6 ✨
 
-Made with ☕ + 💻 + 🤖
+**🌻 Classification　•　🎯 Detection　•　🔎 Retrieval　•　💬 RAG Chatbot**
 
-⭐ **Nếu project hữu ích, hãy để lại một Star!** ⭐
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:20D3C2,50:45B7FF,100:6C63FF&height=110&section=footer" width="100%"/>
 
 </div>
