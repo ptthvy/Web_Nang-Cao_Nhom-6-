@@ -147,7 +147,9 @@
 <<div align="center">
 # 🎤 SLIDE QUY TRÌNH 
 <a href="docs/Web_Apps_Nhom6.pptx">
-  <img src="docs/slide-preview.png" width="90%" alt="Slide thuyết trình AI Web Apps Nhóm 6"/>
+  <img src="docs/slide-cach-thuc-hien.png"
+     width="95%"
+     alt="Slide cách thực hiện AI Web Apps"/>
 </a>
 
 <br/><br/>
