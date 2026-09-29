@@ -273,28 +273,7 @@ npm run dev
 | **Phạm Thế Duy** | `24100583` | 🔎 **Image Retrieval** | `retrieval.py` · `Search.jsx` · `ImagePicker.jsx` · search API |
 | **Nguyễn Văn An** | `24100254` | 💬 **RAG Chatbot** | `llm.py` · `Chat.jsx` · `data/kb/*` · chat API · tích hợp hệ thống |
 
-</div>
-
-### 🌻 Phạm Thảo Hiền Vy — Image Classification + README
-
-```text
-Người dùng
-    ↓
-Classify.jsx
-    ↓
-FastAPI / classify
-    ↓
-core/classifier.py
-    ↓
-AI Model
-    ↓
-Kết quả phân loại
-```
-
-> Ngoài module **Image Classification**, Vy phụ trách thiết kế và hoàn thiện **README**, trình bày giao diện và tài liệu GitHub của nhóm.
-
----
-
+</div>  
 # 🚀 QUY TRÌNH THỰC HIỆN
 
 ```mermaid
