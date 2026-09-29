@@ -144,22 +144,21 @@
 
 ---
 
-
+<<div align="center">
 # 🎤 SLIDE QUY TRÌNH 
-
-<div align="center">
-
-### ✨ Presentation — AI Web Apps Nhóm 6
-
-> Slide tóm tắt **cách nhóm xây dựng hệ thống**, kiến trúc tổng thể, các chức năng AI và giao diện sản phẩm.
-
-<br/>
-
-<a href="./docs/AI_Web_Apps_Nhom6.pptx">
-  <img src="https://img.shields.io/badge/🎤_XEM_SLIDE_THUYẾT_TRÌNH-6C63FF?style=for-the-badge" alt="Presentation"/>
+<a href="docs/Web_Apps_Nhom6.pptx">
+  <img src="docs/slide-preview.png" width="90%" alt="Slide thuyết trình AI Web Apps Nhóm 6"/>
 </a>
 
 <br/><br/>
+
+<a href="docs/Web_Apps_Nhom6.pptx">
+  <img src="https://img.shields.io/badge/🎤_XEM_POWERPOINT-6C63FF?style=for-the-badge"/>
+</a>
+
+<p><b>👆 Nhấn vào hình hoặc nút phía trên để xem PowerPoint</b></p>
+
+</div>
 
 **🧠 AI Modules　→　⚡ FastAPI　→　⚛️ ReactJS　→　🔗 Tích hợp & Kiểm thử**
 
