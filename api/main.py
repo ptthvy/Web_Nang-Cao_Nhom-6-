@@ -31,3 +31,11 @@ async def classify(file: UploadFile = File(...), top_k: int = Form(3)):
     started_at = time.perf_counter()
     result = get_classifier().predict(await read_image(file), top_k=max(1, min(top_k, 5)))
     return {**result, "latency_ms": round((time.perf_counter() - started_at) * 1000, 1)}
+
+
+@app.post("/api/detect")
+async def detect(file: UploadFile = File(...), conf: float = Form(0.25)):
+    model = _require("detector")
+    t0 = time.perf_counter()
+    result, annotated = model.detect(await _read_image(file), conf=min(max(conf, 0.05), 0.95))
+    return {**result, "image": _to_base64(annotated), "latency_ms": round((time.perf_counter() - t0) * 1000, 1)}
