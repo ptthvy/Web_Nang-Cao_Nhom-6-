@@ -145,7 +145,7 @@
 ---
 
 
-# 🎤 SLIDE THUYẾT TRÌNH
+# 🎤 SLIDE QUY TRÌNH 
 
 <div align="center">
 
@@ -420,41 +420,6 @@ Mở địa chỉ mà terminal React/Vite hiển thị và sử dụng các ch�
 | **Phạm Thảo Hiền Vy** | `24100439` | 💬 **Chatbot / RAG** | `core/llm.py` · `Chat.jsx` · `data/kb/*` · phần chat trong `api/main.py` · **README & trình bày GitHub** |
 
 </div>
-
-### 💬 Phạm Thảo Hiền Vy — Chatbot/RAG + README
-
-```text
-Người dùng
-    ↓
-Chat.jsx
-    ↓
-FastAPI / chat
-    ↓
-core/llm.py
-    ↓
-Knowledge Base (data/kb)
-    ↓
-RAG / LLM
-    ↓
-Câu trả lời
-```
-
-> Ngoài module **Chatbot/RAG**, Vy phụ trách thiết kế và hoàn thiện **README**, trình bày hình ảnh giao diện, hướng dẫn sử dụng và tài liệu GitHub của nhóm.
-
-### 🌻 Nguyễn Văn An — Image Classification
-
-`core/classifier.py` → classify API → `Classify.jsx`
-
-### 🎯 Đào Bá Tuấn Ngọc — Object Detection
-
-`core/detector.py` → detect API → `Detect.jsx`
-
-### 🔎 Phạm Thế Duy — Image Retrieval
-
-`core/retrieval.py` → search API → `Search.jsx` + `ImagePicker.jsx`
-
----
-
 # 🚀 QUY TRÌNH THỰC HIỆN
 
 ```mermaid
