@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-FF5A7A?style=flat-square"/>
 </p>
 
-**[🌟 Giới thiệu](#-giới-thiệu) · [🧠 Chức năng](#-4-chức-năng-ai) · [🖼️ Giao diện](#️-giao-diện-hệ-thống) · [🏗️ Kiến trúc](#️-kiến-trúc-hệ-thống) · [⚡ Cách chạy](#-cách-chạy) · [👥 Thành viên](#-phân-công-thành-viên)**
+**[🌟 Giới thiệu](#-giới-thiệu) · [🧠 Chức năng](#-4-chức-năng-ai) · [🖼️ Giao diện](#️-giao-diện-hệ-thống) · [🏗️ Kiến trúc](#️-kiến-trúc-hệ-thống) · [⚡ 2 cách sử dụng](#-2-cách-sử-dụng-hệ-thống) · [👥 Thành viên](#-phân-công-thành-viên)**
 
 </div>
 
@@ -228,28 +228,108 @@ Web_Nang-Cao_Nhom-6-/
 
 ---
 
-# ⚡ CÁCH CHẠY
+# ⚡ 2 CÁCH SỬ DỤNG HỆ THỐNG
 
-### 1️⃣ Clone project
+<div align="center">
+
+| ☁️ **CÁCH 1 — GOOGLE COLAB** | 💻 **CÁCH 2 — CHẠY LOCAL** |
+|:---:|:---:|
+| Nhanh, thuận tiện, không cần cấu hình nhiều trên máy | Chạy đầy đủ Frontend + Backend + AI Core |
+| **Notebook → Models → App → Demo** | **ReactJS → FastAPI → AI Modules** |
+
+</div>
+
+---
+
+## ☁️ Cách 1 — Sử dụng Google Colab
+
+> [!TIP]
+> Phù hợp khi cần **chạy thử nhanh hoặc demo project** mà không muốn cài đặt toàn bộ môi trường AI trên máy cá nhân.
+
+### 1️⃣ Mở Notebook trên Google Colab
+
+Mở file notebook của project:
+
+```text
+AI_Web_Apps_Streamlit_React.ipynb
+```
+
+### 2️⃣ Thiết lập Runtime
+
+Trong Google Colab, chọn:
+
+```text
+Runtime → Change runtime type → GPU
+```
+
+nếu notebook/model cần tăng tốc bằng GPU.
+
+### 3️⃣ Chạy lần lượt các cell
+
+```text
+Cài thư viện
+      ↓
+Nạp / khởi tạo model
+      ↓
+Chuẩn bị dữ liệu
+      ↓
+Khởi chạy ứng dụng
+      ↓
+Mở đường dẫn giao diện
+```
+
+### 4️⃣ Sử dụng các chức năng AI
+
+Sau khi hệ thống khởi chạy, có thể kiểm thử:
+
+- 🌻 **Image Classification** — phân loại ảnh.
+- 🎯 **Object Detection** — nhận diện đối tượng.
+- 🔎 **Image Retrieval** — tìm kiếm ảnh tương đồng.
+- 💬 **RAG Chatbot** — hỏi đáp theo Knowledge Base.
+
+> [!NOTE]
+> Khi chạy bằng Colab, cần giữ phiên Colab hoạt động trong quá trình sử dụng ứng dụng.
+
+---
+
+## 💻 Cách 2 — Chạy Local với ReactJS + FastAPI
+
+> [!TIP]
+> Phù hợp để **phát triển, kiểm thử và chỉnh sửa source code** trực tiếp trên máy.
+
+### 1️⃣ Clone repository
 
 ```bash
 git clone https://github.com/ptthvy/Web_Nang-Cao_Nhom-6-.git
 cd Web_Nang-Cao_Nhom-6-
 ```
 
-### 2️⃣ Cài đặt Backend
+### 2️⃣ Cài đặt thư viện Backend
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Khởi chạy FastAPI
+### 3️⃣ Khởi chạy FastAPI Backend
 
 ```bash
 uvicorn api.main:app --reload
 ```
 
-### 4️⃣ Khởi chạy Frontend
+Backend chịu trách nhiệm nhận request từ giao diện và chuyển dữ liệu đến các module AI:
+
+```text
+api/main.py
+     │
+     ├── classify → core/classifier.py
+     ├── detect   → core/detector.py
+     ├── search   → core/retrieval.py
+     └── chat     → core/llm.py
+```
+
+### 4️⃣ Cài đặt và chạy ReactJS Frontend
+
+Mở terminal mới:
 
 ```bash
 cd web
@@ -257,8 +337,37 @@ npm install
 npm run dev
 ```
 
-> [!TIP]
-> Khởi chạy **Backend trước**, sau đó chạy **Frontend** để giao diện có thể gọi các API AI.
+### 5️⃣ Truy cập giao diện
+
+Mở địa chỉ mà terminal React/Vite hiển thị và sử dụng các chức năng của hệ thống.
+
+<div align="center">
+
+### 🔄 Luồng chạy Local
+
+**👤 User** → **⚛️ ReactJS** → **⚡ FastAPI** → **🧠 AI Core** → **✨ Result**
+
+</div>
+
+> [!IMPORTANT]
+> Khi chạy Local, hãy đảm bảo **Backend FastAPI đang hoạt động trước hoặc đồng thời với Frontend** để các chức năng có thể gọi API thành công.
+
+---
+
+### 🎯 Nên dùng cách nào?
+
+<div align="center">
+
+| Nhu cầu | Cách phù hợp |
+|---|:---:|
+| 🚀 Demo nhanh | ☁️ **Google Colab** |
+| 🧪 Chạy thử model | ☁️ **Google Colab** |
+| 💻 Phát triển source code | 💻 **Local** |
+| 🎨 Chỉnh sửa ReactJS | 💻 **Local** |
+| ⚡ Kiểm thử API FastAPI | 💻 **Local** |
+| 🔗 Kiểm thử toàn bộ Frontend ↔ Backend ↔ AI | 💻 **Local** |
+
+</div>
 
 ---
 
@@ -268,12 +377,47 @@ npm run dev
 
 | 👤 Thành viên | 🆔 MSSV | ⭐ Module chính | 🛠️ Phạm vi phụ trách |
 |---|:---:|---|---|
-| **Phạm Thảo Hiền Vy** | `24100439` | 🌻 **Image Classification** | `classifier.py` · `Classify.jsx` · classify API · **README & trình bày GitHub** |
-| **Đào Bá Tuấn Ngọc** | `24100498` | 🎯 **Object Detection** | `detector.py` · `Detect.jsx` · detect API · kiểm thử detection |
-| **Phạm Thế Duy** | `24100583` | 🔎 **Image Retrieval** | `retrieval.py` · `Search.jsx` · `ImagePicker.jsx` · search API |
-| **Nguyễn Văn An** | `24100254` | 💬 **RAG Chatbot** | `llm.py` · `Chat.jsx` · `data/kb/*` · chat API · tích hợp hệ thống |
+| **Nguyễn Văn An** | `24100254` | 🌻 **Image Classification** | `core/classifier.py` · `Classify.jsx` · phần classify trong `api/main.py` |
+| **Đào Bá Tuấn Ngọc** | `24100498` | 🎯 **Object Detection** | `core/detector.py` · `Detect.jsx` · phần detect trong `api/main.py` |
+| **Phạm Thế Duy** | `24100583` | 🔎 **Image Retrieval** | `core/retrieval.py` · `Search.jsx` · `ImagePicker.jsx` · phần search trong `api/main.py` |
+| **Phạm Thảo Hiền Vy** | `24100439` | 💬 **Chatbot / RAG** | `core/llm.py` · `Chat.jsx` · `data/kb/*` · phần chat trong `api/main.py` · **README & trình bày GitHub** |
 
-</div>  
+</div>
+
+### 💬 Phạm Thảo Hiền Vy — Chatbot/RAG + README
+
+```text
+Người dùng
+    ↓
+Chat.jsx
+    ↓
+FastAPI / chat
+    ↓
+core/llm.py
+    ↓
+Knowledge Base (data/kb)
+    ↓
+RAG / LLM
+    ↓
+Câu trả lời
+```
+
+> Ngoài module **Chatbot/RAG**, Vy phụ trách thiết kế và hoàn thiện **README**, trình bày hình ảnh giao diện, hướng dẫn sử dụng và tài liệu GitHub của nhóm.
+
+### 🌻 Nguyễn Văn An — Image Classification
+
+`core/classifier.py` → classify API → `Classify.jsx`
+
+### 🎯 Đào Bá Tuấn Ngọc — Object Detection
+
+`core/detector.py` → detect API → `Detect.jsx`
+
+### 🔎 Phạm Thế Duy — Image Retrieval
+
+`core/retrieval.py` → search API → `Search.jsx` + `ImagePicker.jsx`
+
+---
+
 # 🚀 QUY TRÌNH THỰC HIỆN
 
 ```mermaid
