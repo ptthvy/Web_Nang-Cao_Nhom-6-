@@ -6,9 +6,11 @@ from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from PIL import Image, UnidentifiedImageError
 
 from core.classifier import ImageClassifier
+from core.detector import ObjectDetector
 
 app = FastAPI(title="AI Web Apps")
 classifier: ImageClassifier | None = None
+detector: ObjectDetector | None = None
 
 
 async def read_image(file: UploadFile) -> Image.Image:
@@ -25,6 +27,13 @@ def get_classifier() -> ImageClassifier:
     return classifier
 
 
+def get_detector() -> ObjectDetector:
+    global detector
+    if detector is None:
+        detector = ObjectDetector()
+    return detector
+
+
 @app.post("/api/classify")
 async def classify(file: UploadFile = File(...), top_k: int = Form(3)):
     """Trả về ba nhãn hoa có độ tin cậy cao nhất."""
@@ -35,7 +44,7 @@ async def classify(file: UploadFile = File(...), top_k: int = Form(3)):
 
 @app.post("/api/detect")
 async def detect(file: UploadFile = File(...), conf: float = Form(0.25)):
-    model = _require("detector")
+    model = get_detector()
     t0 = time.perf_counter()
-    result, annotated = model.detect(await _read_image(file), conf=min(max(conf, 0.05), 0.95))
+    result, annotated = model.detect(await read_image(file), conf=min(max(conf, 0.05), 0.95))
     return {**result, "image": _to_base64(annotated), "latency_ms": round((time.perf_counter() - t0) * 1000, 1)}
