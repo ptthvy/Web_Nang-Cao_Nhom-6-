@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-FF5A7A?style=flat-square"/>
 </p>
 
-**[🌟 Giới thiệu](#-giới-thiệu) · [🧠 Chức năng](#-4-chức-năng-ai) · [🖼️ Giao diện](#️-giao-diện-hệ-thống) · [🏗️ Kiến trúc](#️-kiến-trúc-hệ-thống) · [⚡ 2 cách sử dụng](#-2-cách-sử-dụng-hệ-thống) · [👥 Thành viên](#-phân-công-thành-viên)**
+**[🌟 Giới thiệu](#-giới-thiệu) · [🧠 Chức năng](#-4-chức-năng-ai) · [🖼️ Giao diện](#️-giao-diện-hệ-thống) · [🎤 Slide](#-slide-thuyết-trình) · [🏗️ Kiến trúc](#️-kiến-trúc-hệ-thống) · [⚡ 2 cách sử dụng](#-2-cách-sử-dụng-hệ-thống) · [👥 Thành viên](#-phân-công-thành-viên)**
 
 </div>
 
@@ -141,6 +141,43 @@
 <img src="docs/chat.png" width="88%" alt="RAG Chatbot Interface"/>
 
 </div>
+
+---
+
+
+# 🎤 SLIDE THUYẾT TRÌNH
+
+<div align="center">
+
+### ✨ Presentation — AI Web Apps Nhóm 6
+
+> Slide tóm tắt **cách nhóm xây dựng hệ thống**, kiến trúc tổng thể, các chức năng AI và giao diện sản phẩm.
+
+<br/>
+
+<a href="./docs/AI_Web_Apps_Nhom6.pptx">
+  <img src="https://img.shields.io/badge/🎤_XEM_SLIDE_THUYẾT_TRÌNH-6C63FF?style=for-the-badge" alt="Presentation"/>
+</a>
+
+<br/><br/>
+
+**🧠 AI Modules　→　⚡ FastAPI　→　⚛️ ReactJS　→　🔗 Tích hợp & Kiểm thử**
+
+</div>
+
+### 📌 Nội dung trình bày
+
+| Phần | Nội dung |
+|---|---|
+| 🎯 **Mục tiêu** | Xây dựng website tích hợp 4 chức năng AI |
+| 🧠 **AI Core** | Classification · Detection · Retrieval · RAG Chatbot |
+| ⚡ **Backend** | FastAPI kết nối giao diện với các module AI |
+| ⚛️ **Frontend** | ReactJS xây dựng giao diện tương tác |
+| 🔄 **Cách làm** | AI Core → API → Frontend → Tích hợp → Kiểm thử |
+| 🖼️ **Demo** | Giao diện thực tế của 4 chức năng |
+
+> [!IMPORTANT]
+> Đặt file PowerPoint của nhóm tại **`docs/AI_Web_Apps_Nhom6.pptx`** để nút **Xem slide thuyết trình** phía trên hoạt động trực tiếp trên GitHub.
 
 ---
 
@@ -380,9 +417,44 @@ Mở địa chỉ mà terminal React/Vite hiển thị và sử dụng các ch�
 | **Nguyễn Văn An** | `24100254` | 🌻 **Image Classification** | `core/classifier.py` · `Classify.jsx` · phần classify trong `api/main.py` |
 | **Đào Bá Tuấn Ngọc** | `24100498` | 🎯 **Object Detection** | `core/detector.py` · `Detect.jsx` · phần detect trong `api/main.py` |
 | **Phạm Thế Duy** | `24100583` | 🔎 **Image Retrieval** | `core/retrieval.py` · `Search.jsx` · `ImagePicker.jsx` · phần search trong `api/main.py` |
-| **Phạm Thảo Hiền Vy** | `24100439` | 💬 **Chatbot / RAG** | `core/llm.py` · `Chat.jsx` · `data/kb/*` · phần chat trong `api/main.py`  |
+| **Phạm Thảo Hiền Vy** | `24100439` | 💬 **Chatbot / RAG** | `core/llm.py` · `Chat.jsx` · `data/kb/*` · phần chat trong `api/main.py` · **README & trình bày GitHub** |
 
 </div>
+
+### 💬 Phạm Thảo Hiền Vy — Chatbot/RAG + README
+
+```text
+Người dùng
+    ↓
+Chat.jsx
+    ↓
+FastAPI / chat
+    ↓
+core/llm.py
+    ↓
+Knowledge Base (data/kb)
+    ↓
+RAG / LLM
+    ↓
+Câu trả lời
+```
+
+> Ngoài module **Chatbot/RAG**, Vy phụ trách thiết kế và hoàn thiện **README**, trình bày hình ảnh giao diện, hướng dẫn sử dụng và tài liệu GitHub của nhóm.
+
+### 🌻 Nguyễn Văn An — Image Classification
+
+`core/classifier.py` → classify API → `Classify.jsx`
+
+### 🎯 Đào Bá Tuấn Ngọc — Object Detection
+
+`core/detector.py` → detect API → `Detect.jsx`
+
+### 🔎 Phạm Thế Duy — Image Retrieval
+
+`core/retrieval.py` → search API → `Search.jsx` + `ImagePicker.jsx`
+
+---
+
 # 🚀 QUY TRÌNH THỰC HIỆN
 
 ```mermaid
