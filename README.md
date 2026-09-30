@@ -418,7 +418,7 @@ Mở địa chỉ mà terminal React/Vite hiển thị và sử dụng các ch�
 | **Nguyễn Văn An** | `24100254` | 🌻 **Image Classification** | `core/classifier.py` · `Classify.jsx` · phần classify trong `api/main.py` |
 | **Đào Bá Tuấn Ngọc** | `24100498` | 🎯 **Object Detection** | `core/detector.py` · `Detect.jsx` · phần detect trong `api/main.py` |
 | **Phạm Thế Duy** | `24100583` | 🔎 **Image Retrieval** | `core/retrieval.py` · `Search.jsx` · `ImagePicker.jsx` · phần search trong `api/main.py` |
-| **Phạm Thảo Hiền Vy** | `24100439` | 💬 **Chatbot / RAG** | `core/llm.py` · `Chat.jsx` · `data/kb/*` · phần chat trong `api/main.py` · **README & trình bày GitHub** |
+| **Phạm Thảo Hiền Vy** | `24100439` | 💬 **Chatbot / RAG** | `core/llm.py` · `Chat.jsx` · `data/kb/*` · phần chat trong `api/main.py`  |
 
 </div>
 # 🚀 QUY TRÌNH THỰC HIỆN
