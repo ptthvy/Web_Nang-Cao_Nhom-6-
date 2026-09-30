@@ -342,17 +342,23 @@ git clone https://github.com/ptthvy/Web_Nang-Cao_Nhom-6-.git
 cd Web_Nang-Cao_Nhom-6-
 ```
 
-### 2️⃣ Cài đặt thư viện Backend
+### 2️⃣ Terminal 1 — Cài đặt và chạy Backend AI
+
+Tại thư mục gốc của dự án, tạo môi trường Python riêng rồi cài thư viện:
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Khởi chạy FastAPI Backend
+Khởi động backend (giữ Terminal 1 mở trong lúc demo):
 
 ```bash
-uvicorn api.main:app --reload
+uvicorn api.main:app --reload --port 8000
 ```
+
+Khi thấy dòng `Uvicorn running on http://127.0.0.1:8000`, backend đã sẵn sàng. Lần chạy đầu có thể mất vài phút để nạp model AI.
 
 Backend chịu trách nhiệm nhận request từ giao diện và chuyển dữ liệu đến các module AI:
 
@@ -365,19 +371,24 @@ api/main.py
      └── chat     → core/llm.py
 ```
 
-### 4️⃣ Cài đặt và chạy ReactJS Frontend
+### 3️⃣ Terminal 2 — Chạy giao diện ReactJS
 
-Mở terminal mới:
+Mở **một Terminal mới**. Nếu Terminal đang ở thư mục khác, quay lại đúng thư mục `Web_Nang-Cao_Nhom-6-` trước khi chạy:
 
 ```bash
-cd web
+cd Web_Nang-Cao_Nhom-6-/web
 npm install
 npm run dev
 ```
 
-### 5️⃣ Truy cập giao diện
+> Nếu bạn đang đứng sẵn trong thư mục gốc dự án, chỉ cần dùng `cd web` thay cho dòng đầu tiên.
 
-Mở địa chỉ mà terminal React/Vite hiển thị và sử dụng các chức năng của hệ thống.
+### 4️⃣ Truy cập và kiểm tra
+
+Mở [http://localhost:5173](http://localhost:5173) để dùng web. Có thể kiểm tra backend tại [http://localhost:8000/api/health](http://localhost:8000/api/health).
+
+> [!NOTE]
+> Cần để **cả hai Terminal cùng chạy**: Terminal 1 xử lý AI/FastAPI, Terminal 2 hiển thị giao diện React. Khi kết thúc, nhấn `Ctrl + C` ở từng Terminal để dừng.
 
 <div align="center">
 
